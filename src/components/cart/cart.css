@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #E75B1E;
+    --borderColor: #ddd;
+}
+
+.table-container {
+    width: 80%;
+    margin: 150px auto;
+    display: flex;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.quantity-td div {
+    margin-top: 15px;
+}
+
+.delete-btn {
+    font-size: 20px;
+    background-color: transparent;
+    transition: all .3s;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.delete-btn:hover {
+    color: var(--mainColor);
+}
+
+.quantity-td {
+    display: flex;
+}
+
+.btn-minus,
+.btn-plus {
+    padding: 5px;
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor) !important;
+    color: white;
+    transform: translateY(0);
+    transition: all .2s;
+
+}
+
+.btn-minus:hover,
+.btn-plus:hover {
+    transform: translateY(-2px)
+}
+
+.quantity-input {
+    width: 30px;
+    padding: 5px;
+    border: 1px solid var(--mainColor);
+    text-align: center;
+    height: 37.20px;
+}
+
+.quantity-input:focus {
+    border: var(--mainColor);
+    outline: none;
+}
+
+/* Book Order area */
+.check-out {
+    width: 38%;
+    margin: 0 1%;
+    border: 1px solid var(--borderColor);
+    height: 250px;
+    border: 1px solid #ccc;
+    background-color: #F8F8F8;
+}
+
+.check-out h1 {
+    width: 100%;
+    border-bottom: 1px solid var(--borderColor);
+    padding: 10px;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    color: #686868;
+
+}
+
+.check-out div {
+    width: 90%;
+
+}
+
+.total-cart {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.book-option {
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    justify-content: flex-start
+}
+
+.book-option input {
+    margin-right: 20px;
+}
+
+.check-out button {
+    float: right;
+    margin-right: 10px;
+    width: 60%;
+    font-size: 20px;
+    border: none;
+    background-color: var(--mainColor) !important;
+    color: #fff;
+    transform: translateY(0);
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.check-out button:hover {
+    transform: translateY(-3px);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media(max-width: 768px) {
+    .table-container {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .check-out {
+        width: 100%;
+        align-self: flex-end;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    .quantity-td div {
+        margin-left: 59%;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+@media(max-width:426px) {
+    .check-out {
+        width: 98%;
+
+        align-self: flex-end;
+    }
+
+    .quantity-input {
+        height: 32.25px;
+    }
+
+    .quantity-td {
+        margin-top: 0;
+        margin-left: 75%;
+    }
+
+    .dish-image {
+        margin-left: 68%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .quantity-td {
+        margin-left: 70%;
+    }
+
+    .dish-image {
+        margin-left: 64%;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .quantity-td {
+        margin-left: 65%;
+    }
+
+    .dish-image {
+        margin-left: 58%;
+    }
+}

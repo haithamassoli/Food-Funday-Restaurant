@@ -1,0 +1,135 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import url("https://fonts.googleapis.com/css?family=Paprika");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+
+.container2 {
+  max-width: 78%;
+  margin: 20px auto;
+  padding: 1.5em;
+}
+
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+  width: 100%;
+}
+
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  color: #e75b1e;
+  font-weight: bold;
+}
+
+.menu-item-heading a {
+  display: flex;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a :hover {
+  color: #e75b1e;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+  text-align: left;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+.row1 {
+  display: flex;
+}
+
+.col1 {
+  flex: 20%;
+  padding: 16px;
+  height: 250px;
+  margin: 220px auto;
+  padding-left: 5em;
+}
+.container3 {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+}
+.head {
+  font-weight: bold;
+  color: #e75b1e;
+  font-family: "nautilus_pompiliusregular";
+  font-size: 40px;
+}
+.b3 {
+  margin: 8px;
+}
+@media (max-width: 426px) {
+  .container2 {
+    padding: 0;
+    margin: auto;
+  }
+  .container3 {
+    padding: 20px 0;
+  }
+  .menu-item-heading {
+    flex-direction: column;
+  }
+  .menu-item-heading a {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
